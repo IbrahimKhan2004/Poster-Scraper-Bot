@@ -380,7 +380,7 @@ Delete broadcast messages from all users.
 
 Live bot can be found here
 
-**Bot:** [@PostersDLBot](https://t.me/PostersDLBot)
+**Bot:** [@PostersDLBot](https://t.me/+rurOI-O9ciozYjVl)
 
 U can test all features and commands to see how it works!
 
