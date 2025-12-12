@@ -1,5 +1,5 @@
 from time import monotonic
-from pyrogram.enums import ChatType
+from pyrogram.enums import ChatType, ParseMode
 
 from .. import LOGGER
 from ..eco import echo
