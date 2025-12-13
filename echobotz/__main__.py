@@ -9,7 +9,7 @@ from pyrogram import idle
 
 from config import Config
 from . import LOGGER, bot_loop
-from .core.EchoClient import EchoClient
+from .core.EchoClient import EchoBot
 from .core.plugs import add_plugs
 from .helper.utils.db import database
 from .helper.utils.bot_cmds import _get_bot_commands
@@ -23,19 +23,21 @@ async def main():
 
     Formatter.converter = changetz
 
+    # ✅ Public-bot style (even single client)
     await gather(
-        EchoClient.start_bot(),
+        EchoBot.start(),
     )
 
-    await EchoClient.bot.set_bot_commands(_get_bot_commands())
+    # AFTER client is ready
+    await EchoBot.bot.set_bot_commands(_get_bot_commands())
 
     add_plugs()
 
-    LOGGER.info("Echo Bot fully started")
+    LOGGER.info("EchoBot fully started")
 
     await idle()
 
-    await EchoClient.stop()
+    await EchoBot.stop()
 
 
 bot_loop.run_until_complete(main())
