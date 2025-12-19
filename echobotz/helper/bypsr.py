@@ -291,13 +291,13 @@ async def _bp_info(cmd_name, target_url):
                 requests.post,
                 api_url,
                 json={"url": target_url},
-                timeout=20,
+                timeout=,30,
             )
         else:
             resp = await _sync_to_async(
                 requests.get,
                 api_url,
-                timeout=20,
+                timeout=30,
             )
     except Exception as e:
         LOGGER.error(f"Bypass HTTP error: {e}", exc_info=True)
